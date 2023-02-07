@@ -2,11 +2,22 @@ import logo from './logo.svg';
 import './App.css';
 import {Button} from 'antd';
 import 'antd/dist/antd';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import Home from './pages/Home';
+
 function App() {
   return (
     <div className="App">
-      <h1>TRACK MONEY</h1>
-      <Button type="primary">Primary Button</Button>
+      <BrowserRouter>
+
+      <Routes>
+
+    <Route path='/' element={<Home/>}/>
+    
+
+      </Routes>
+      
+      </BrowserRouter>
     </div>
   );
 }
