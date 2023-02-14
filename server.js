@@ -1,8 +1,10 @@
-const express=require('express');
-const dbConnect=require('./dbConnect');
-const app=express();
-const port=5000;
+const express = require("express");
+const dbConnect = require("./dbConnect");
+const app = express();
+app.use(express.json());
+const userRoute = require("./routes/usersRoute");
 
 
-app.get('/',(req,res)=>res.send('Hello'));
-app.listen(port, ()=> console.log(`NodeJs server started at port ${port}!`));
+const port = 5000;
+
+app.listen(port, () => console.log(`NodeJs server started at port ${port}!`));
